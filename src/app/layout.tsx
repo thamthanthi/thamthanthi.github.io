@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
   title: "TTTHI – Technology for a Safer Tomorrow",
   description:
-    "TTTHI นำเสนอโซลูชันระบบกล้องวงจรปิด อุปกรณ์บันทึกภาพ และพัฒนาระบบซอฟต์แวร์ที่ทันสมัย ตอบโจทย์ทุกความต้องการด้านความปลอดภัยและเทคโนโลยี",
+    "TTTHI delivers cutting-edge CCTV solutions, recording systems, and custom software development. นำเสนอโซลูชันระบบกล้องวงจรปิด อุปกรณ์บันทึกภาพ และพัฒนาระบบซอฟต์แวร์ที่ทันสมัย",
   keywords: [
     "TTTHI",
     "กล้องวงจรปิด",
@@ -12,6 +13,8 @@ export const metadata: Metadata = {
     "Smart Camera",
     "DVR",
     "NVR",
+    "Software Development",
+    "Security System",
     "พัฒนาซอฟต์แวร์",
     "ระบบรักษาความปลอดภัย",
   ],
@@ -27,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="th" className="scroll-smooth">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }

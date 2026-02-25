@@ -1,9 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Phone, Mail, Facebook, Youtube } from "lucide-react";
+import { useLang } from "@/context/LanguageContext";
+import { homeTranslations } from "@/lib/translations";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { lang } = useLang();
+  const f = homeTranslations.footer;
 
   return (
     <footer className="bg-[#060e28] text-gray-300">
@@ -26,8 +32,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-gray-400 leading-relaxed mb-6 max-w-sm">
-              ผู้นำด้านระบบกล้องวงจรปิดอัจฉริยะและโซลูชันเทคโนโลยี
-              เพื่อความปลอดภัยและการบริหารที่ชาญฉลาดของธุรกิจคุณ
+              {lang === "th" ? f.tagline.th : f.tagline.en}
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
@@ -51,23 +56,17 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="text-white font-semibold text-base mb-5 tracking-wide">
-              เมนูหลัก
+              {lang === "th" ? f.menu.th : f.menu.en}
             </h4>
             <ul className="space-y-3">
-              {[
-                { href: "#about", label: "เกี่ยวกับเรา" },
-                { href: "#products", label: "สินค้าของเรา" },
-                { href: "#services", label: "บริการ" },
-                { href: "#vision", label: "วิสัยทัศน์" },
-                { href: "#contact", label: "ติดต่อเรา" },
-              ].map((link) => (
-                <li key={link.href}>
+              {f.menuItems.map((item) => (
+                <li key={item.href}>
                   <a
-                    href={link.href}
+                    href={item.href}
                     className="text-gray-400 hover:text-amber-400 transition-colors duration-200 text-sm flex items-center gap-2"
                   >
                     <span className="w-1 h-1 rounded-full bg-amber-500 shrink-0" />
-                    {link.label}
+                    {lang === "th" ? item.th : item.en}
                   </a>
                 </li>
               ))}
@@ -77,13 +76,13 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h4 className="text-white font-semibold text-base mb-5 tracking-wide">
-              ติดต่อ
+              {lang === "th" ? f.contactTitle.th : f.contactTitle.en}
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-amber-400 mt-1 shrink-0" />
                 <span className="text-gray-400 text-sm leading-relaxed">
-                  กรุงเทพมหานคร ประเทศไทย
+                  {lang === "th" ? f.location.th : f.location.en}
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -113,21 +112,21 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-500 text-sm">
-            © {currentYear} TTTHI. สงวนลิขสิทธิ์ทุกประการ
+            © {currentYear} TTTHI. {lang === "th" ? f.rights.th : f.rights.en}
           </p>
           <div className="flex items-center gap-5">
             <Link
               href="/privacy-policy"
               className="text-gray-500 hover:text-amber-400 text-sm transition-colors"
             >
-              นโยบายความเป็นส่วนตัว
+              {lang === "th" ? f.privacy.th : f.privacy.en}
             </Link>
             <span className="text-gray-700">|</span>
             <Link
               href="/terms-of-service"
               className="text-gray-500 hover:text-amber-400 text-sm transition-colors"
             >
-              ข้อกำหนดการใช้งาน
+              {lang === "th" ? f.terms.th : f.terms.en}
             </Link>
           </div>
         </div>
