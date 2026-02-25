@@ -160,7 +160,9 @@ export default function PrivacyPolicyPage() {
               {lang === "th" ? "← หน้าหลัก" : "← Home"}
             </Link>
           </div>
-          <h1 className="text-4xl font-extrabold text-[#0a1842] mb-2">{c.title}</h1>
+          <h1 className="text-4xl font-extrabold text-[#0a1842] mb-2">
+            {c.title}
+          </h1>
           <p className="text-gray-500 font-medium mb-1">{c.subtitle}</p>
           <p className="text-gray-400 text-sm">{c.updated}</p>
           <p className="mt-6 text-gray-600 leading-relaxed">{c.intro}</p>
@@ -173,7 +175,9 @@ export default function PrivacyPolicyPage() {
               key={section.title}
               className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8"
             >
-              <h2 className="text-xl font-bold text-[#0a1842] mb-4">{section.title}</h2>
+              <h2 className="text-xl font-bold text-[#0a1842] mb-4">
+                {section.title}
+              </h2>
               <p className="text-gray-600 leading-relaxed whitespace-pre-line text-sm">
                 {section.content}
               </p>
