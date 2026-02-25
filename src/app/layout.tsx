@@ -3,11 +3,11 @@ import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
-  title: "TTTHI – Technology for a Safer Tomorrow",
+  title: "THAMTHANTHI – Technology for a Safer Tomorrow",
   description:
-    "TTTHI delivers cutting-edge CCTV solutions, recording systems, and custom software development. นำเสนอโซลูชันระบบกล้องวงจรปิด อุปกรณ์บันทึกภาพ และพัฒนาระบบซอฟต์แวร์ที่ทันสมัย",
+    "THAMTHANTHI delivers cutting-edge CCTV solutions, recording systems, and custom software development. นำเสนอโซลูชันระบบกล้องวงจรปิด อุปกรณ์บันทึกภาพ และพัฒนาระบบซอฟต์แวร์ที่ทันสมัย",
   keywords: [
-    "TTTHI",
+    "THAMTHANTHI",
     "กล้องวงจรปิด",
     "CCTV",
     "Smart Camera",

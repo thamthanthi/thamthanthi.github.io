@@ -8,8 +8,8 @@ export const homeTranslations = {
     titleHighlight: { th: "อัจฉริยะ", en: "Solutions" },
     title2: { th: "สำหรับธุรกิจยุคใหม่", en: "for Modern Business" },
     desc: {
-      th: "TTTHI นำเสนอโซลูชันกล้องวงจรปิด ระบบบันทึกภาพ และพัฒนาซอฟต์แวร์ที่ทันสมัย เพื่อความปลอดภัยและประสิทธิภาพสูงสุดของธุรกิจคุณ",
-      en: "TTTHI delivers cutting-edge CCTV solutions, recording systems, and custom software development to maximize security and efficiency for your business.",
+      th: "THAMTHANTHI นำเสนอโซลูชันกล้องวงจรปิด ระบบบันทึกภาพ และพัฒนาซอฟต์แวร์ที่ทันสมัย เพื่อความปลอดภัยและประสิทธิภาพสูงสุดของธุรกิจคุณ",
+      en: "THAMTHANTHI delivers cutting-edge CCTV solutions, recording systems, and custom software development to maximize security and efficiency for your business.",
     },
     cta1: { th: "ดูสินค้าของเรา", en: "Our Products" },
     cta2: { th: "ติดต่อเรา", en: "Contact Us" },
@@ -31,8 +31,8 @@ export const homeTranslations = {
     title1: { th: "ผู้เชี่ยวชาญด้านระบบ", en: "Specialists in Complete" },
     title2: { th: "ความปลอดภัยครบวงจร", en: "Security Systems" },
     desc1: {
-      th: "TTTHI ก่อตั้งขึ้นด้วยความมุ่งมั่นที่จะนำเสนอเทคโนโลยีความปลอดภัยที่ทันสมัย พร้อมด้วยบริการที่ครอบคลุมตั้งแต่การออกแบบระบบ การติดตั้ง ไปจนถึงการบำรุงรักษาหลังการขาย",
-      en: "TTTHI was founded with the mission to deliver modern security technology, offering comprehensive services from system design and installation to after-sales maintenance.",
+      th: "THAMTHANTHI ก่อตั้งขึ้นด้วยความมุ่งมั่นที่จะนำเสนอเทคโนโลยีความปลอดภัยที่ทันสมัย พร้อมด้วยบริการที่ครอบคลุมตั้งแต่การออกแบบระบบ การติดตั้ง ไปจนถึงการบำรุงรักษาหลังการขาย",
+      en: "THAMTHANTHI was founded with the mission to deliver modern security technology, offering comprehensive services from system design and installation to after-sales maintenance.",
     },
     desc2: {
       th: "ด้วยประสบการณ์กว่า 10 ปี และทีมวิศวกรผู้เชี่ยวชาญ เราพร้อมให้บริการทั้งองค์กรภาคเอกชน หน่วยงานภาครัฐ และโครงการพิเศษทุกประเภท",

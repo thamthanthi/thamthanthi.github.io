@@ -78,14 +78,19 @@ export default function Navbar() {
             <div className="relative w-12 h-12 shrink-0">
               <Image
                 src="/Logo-TTTHI-(T).png"
-                alt="TTTHI Logo"
+                alt="THAMTHANTHI Logo"
                 fill
                 className="object-contain"
               />
             </div>
-            <span className="text-white font-bold text-xl tracking-wide group-hover:text-amber-400 transition-colors duration-200">
-              TTTHI
-            </span>
+            <div className="flex flex-col leading-none">
+              <span className="text-white font-bold text-lg tracking-wide group-hover:text-amber-400 transition-colors duration-200">
+                {lang === "th" ? "ทำทันที" : "THAMTHANTHI"}
+              </span>
+              <span className="text-amber-400/70 text-[10px] tracking-widest font-medium">
+                {lang === "th" ? "THAMTHANTHI" : "ทำทันที"}
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Links */}

@@ -22,13 +22,18 @@ export default function Footer() {
               <div className="relative w-12 h-12">
                 <Image
                   src="/Logo-TTTHI-(T).png"
-                  alt="TTTHI Logo"
+                  alt="THAMTHANTHI Logo"
                   fill
                   className="object-contain"
                 />
               </div>
               <span className="text-white font-bold text-2xl tracking-wide">
-                TTTHI
+                <span className="block text-lg font-bold">
+                  {lang === "th" ? "ทำทันที" : "THAMTHANTHI"}
+                </span>
+                <span className="block text-xs text-amber-400/70 tracking-widest">
+                  {lang === "th" ? "THAMTHANTHI" : "ทำทันที"}
+                </span>
               </span>
             </div>
             <p className="text-gray-400 leading-relaxed mb-6 max-w-sm">
@@ -112,7 +117,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-500 text-sm">
-            © {currentYear} TTTHI. {lang === "th" ? f.rights.th : f.rights.en}
+            © {currentYear} {lang === "th" ? "ทำทันที" : "THAMTHANTHI"} (THAMTHANTHI). {lang === "th" ? f.rights.th : f.rights.en}
           </p>
           <div className="flex items-center gap-5">
             <Link
