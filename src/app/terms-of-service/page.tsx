@@ -8,10 +8,10 @@ import Footer from "@/components/Footer";
 const content = {
   th: {
     title: "ข้อกำหนดการใช้งาน",
-    subtitle: "บริษัท ทำทันที จำกัด",
+    subtitle: "บริษัท ทำทันที โซลูชั่น จำกัด",
     updated: "อัปเดตล่าสุด: 1 มกราคม 2567",
     intro:
-      "ข้อกำหนดการใช้งานฉบับนี้กำหนดเงื่อนไขในการใช้บริการ เว็บไซต์ และแอปพลิเคชันของ บริษัท ทำทันที จำกัด ('บริษัท') กรุณาอ่านและทำความเข้าใจข้อกำหนดเหล่านี้อย่างละเอียดก่อนใช้บริการ",
+      "ข้อกำหนดการใช้งานฉบับนี้กำหนดเงื่อนไขในการใช้บริการ เว็บไซต์ และแอปพลิเคชันของ บริษัท ทำทันที โซลูชั่น จำกัด ('บริษัท') กรุณาอ่านและทำความเข้าใจข้อกำหนดเหล่านี้อย่างละเอียดก่อนใช้บริการ",
     sections: [
       {
         title: "1. การยอมรับข้อกำหนด",
@@ -21,10 +21,11 @@ const content = {
       {
         title: "2. คำอธิบายบริการ",
         content: `บริษัทให้บริการดังต่อไปนี้:
-• ระบบกล้องวงจรปิดและความปลอดภัย (CCTV & Security)
-• เครื่องบันทึกภาพ DVR/NVR และอุปกรณ์ที่เกี่ยวข้อง
-• การพัฒนาซอฟต์แวร์แบบ Custom
-• การติดตั้ง บำรุงรักษา และให้คำปรึกษาด้านเทคโนโลยี`,
+• อุปกรณ์ MDVR (Mobile DVR) สำหรับติดตั้งบนยานพาหนะ เพื่อบันทึกภาพและวิเคราะห์พฤติกรรมการขับขี่
+• ระบบ ADAS (Advanced Driver Assistance System) สำหรับแจ้งเตือนอันตรายบนท้องถนน
+• ระบบ DMS (Driver Monitoring System) สำหรับตรวจจับและเตือนพฤติกรรมผู้ขับขี่
+• บริการ GPS Tracking ที่ได้รับการรับรองจากกรมขนส่งทางบก (DLT)
+• แพลตฟอร์มติดตามยานพาหนะผ่านเว็บไซต์และแอปพลิเคชันมือถือ`,
       },
       {
         title: "3. การลงทะเบียนและบัญชีผู้ใช้",
@@ -44,7 +45,7 @@ const content = {
       {
         title: "5. ทรัพย์สินทางปัญญา",
         content:
-          "เนื้อหา โลโก้ ซอฟต์แวร์ และทรัพย์สินทางปัญญาทั้งหมดที่ปรากฏในเว็บไซต์และแอปพลิเคชันของบริษัทเป็นกรรมสิทธิ์ของ บริษัท ทำทันที จำกัด ห้ามคัดลอก ดัดแปลง เผยแพร่ หรือนำไปใช้โดยไม่ได้รับอนุญาตเป็นลายลักษณ์อักษร",
+          "เนื้อหา โลโก้ ซอฟต์แวร์ และทรัพย์สินทางปัญญาทั้งหมดที่ปรากฏในเว็บไซต์และแอปพลิเคชันของบริษัทเป็นกรรมสิทธิ์ของ บริษัท ทำทันที โซลูชั่น จำกัด ห้ามคัดลอก ดัดแปลง เผยแพร่ หรือนำไปใช้โดยไม่ได้รับอนุญาตเป็นลายลักษณ์อักษร",
       },
       {
         title: "6. ข้อจำกัดความรับผิด",
@@ -79,7 +80,7 @@ const content = {
       {
         title: "11. ติดต่อเรา",
         content: `หากท่านมีคำถามเกี่ยวกับข้อกำหนดการใช้งาน ติดต่อเราได้ที่:
-บริษัท ทำทันที จำกัด
+บริษัท ทำทันที โซลูชั่น จำกัด
 อีเมล: info@ttthi.com
 โทรศัพท์: +66 (0) 00 000 0000`,
       },
@@ -87,10 +88,10 @@ const content = {
   },
   en: {
     title: "Terms of Service",
-    subtitle: "Thamthanthi Co., Ltd.",
+    subtitle: "Thamthanthi Solution Co., Ltd.",
     updated: "Last updated: January 1, 2024",
     intro:
-      "These Terms of Service outline the conditions for using the services, website, and applications of Thamthanthi Co., Ltd. ('Company'). Please read and understand these terms carefully before using our services.",
+      "These Terms of Service outline the conditions for using the services, website, and applications of Thamthanthi Solution Co., Ltd. ('Company'). Please read and understand these terms carefully before using our services.",
     sections: [
       {
         title: "1. Acceptance of Terms",
@@ -100,10 +101,11 @@ const content = {
       {
         title: "2. Description of Services",
         content: `The Company provides the following services:
-• CCTV and security systems installation and maintenance
-• DVR/NVR recorders and related hardware
-• Custom software development
-• Technology installation, maintenance, and consulting`,
+• MDVR (Mobile DVR) devices for in-vehicle installation to record footage and analyze driving behavior
+• ADAS (Advanced Driver Assistance System) for real-time road hazard alerts
+• DMS (Driver Monitoring System) for detecting and alerting driver behavior
+• GPS Tracking services certified by the Department of Land Transport (DLT)
+• Vehicle tracking platform accessible via web and mobile application`,
       },
       {
         title: "3. Registration and User Accounts",
@@ -123,7 +125,7 @@ const content = {
       {
         title: "5. Intellectual Property",
         content:
-          "All content, logos, software, and intellectual property appearing on the Company's website and applications are the property of Thamthanthi Co., Ltd. Copying, modifying, distributing, or using them without prior written authorization is strictly prohibited.",
+          "All content, logos, software, and intellectual property appearing on the Company's website and applications are the property of Thamthanthi Solution Co., Ltd. Copying, modifying, distributing, or using them without prior written authorization is strictly prohibited.",
       },
       {
         title: "6. Limitation of Liability",
@@ -158,7 +160,7 @@ const content = {
       {
         title: "11. Contact Us",
         content: `If you have questions about these Terms of Service, please contact us:
-Thamthanthi Co., Ltd.
+Thamthanthi Solution Co., Ltd.
 Email: info@ttthi.com
 Phone: +66 (0) 00 000 0000`,
       },

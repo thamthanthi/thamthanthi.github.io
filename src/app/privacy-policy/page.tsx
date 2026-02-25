@@ -8,16 +8,17 @@ import Footer from "@/components/Footer";
 const content = {
   th: {
     title: "นโยบายความเป็นส่วนตัว",
-    subtitle: "บริษัท ทำทันที จำกัด",
+    subtitle: "บริษัท ทำทันที โซลูชั่น จำกัด",
     updated: "อัปเดตล่าสุด: 1 มกราคม 2567",
     intro:
-      "บริษัท ทำทันที จำกัด ('บริษัท') ให้ความสำคัญกับความเป็นส่วนตัวของผู้ใช้งานและลูกค้าทุกท่าน เราจัดทำนโยบายความเป็นส่วนตัวฉบับนี้เพื่ออธิบายวิธีการเก็บรวบรวม ใช้ และคุ้มครองข้อมูลส่วนบุคคลของท่าน",
+      "บริษัท ทำทันที โซลูชั่น จำกัด ('บริษัท') ผู้ให้บริการ GPS Tracking ที่ได้รับการรับรองจากกรมขนส่งทางบก (DLT) และจำหน่ายอุปกรณ์ MDVR สำหรับยานพาหนะ ให้ความสำคัญกับความเป็นส่วนตัวของผู้ใช้งานและลูกค้าทุกท่าน เราจัดทำนโยบายความเป็นส่วนตัวฉบับนี้เพื่ออธิบายวิธีการเก็บรวบรวม ใช้ และคุ้มครองข้อมูลส่วนบุคคลของท่าน",
     sections: [
       {
         title: "1. ข้อมูลที่เราเก็บรวบรวม",
         content: `เราอาจเก็บรวบรวมข้อมูลส่วนบุคคลของท่านในหลายรูปแบบ ได้แก่:
 • ข้อมูลที่ท่านให้โดยตรง: ชื่อ-นามสกุล, อีเมล, เบอร์โทรศัพท์, ที่อยู่
-• ข้อมูลการใช้งาน: ข้อมูลการเข้าถึงเว็บไซต์ หรือแอปพลิเคชัน
+• ข้อมูลการใช้งานระบบ: ข้อมูลการเข้าถึงเว็บไซต์ แอปพลิเคชัน และแพลตฟอร์ม GPS Tracking
+• ข้อมูลยานพาหนะและการเดินทาง: ตำแหน่ง GPS, เส้นทาง, ความเร็ว และพฤติกรรมการขับขี่จากอุปกรณ์ MDVR
 • ข้อมูลอุปกรณ์: IP address, ประเภทเบราว์เซอร์, ระบบปฏิบัติการ`,
       },
       {
@@ -67,7 +68,7 @@ const content = {
       {
         title: "9. ติดต่อเรา",
         content: `หากท่านมีคำถามหรือต้องการใช้สิทธิ์ที่เกี่ยวข้องกับข้อมูลส่วนบุคคล สามารถติดต่อเราได้ที่:
-บริษัท ทำทันที จำกัด
+บริษัท ทำทันที โซลูชั่น จำกัด
 อีเมล: info@ttthi.com
 โทรศัพท์: +66 (0) 00 000 0000`,
       },
@@ -75,16 +76,17 @@ const content = {
   },
   en: {
     title: "Privacy Policy",
-    subtitle: "Thamthanthi Co., Ltd.",
+    subtitle: "Thamthanthi Solution Co., Ltd.",
     updated: "Last updated: January 1, 2024",
     intro:
-      "Thamthanthi Co., Ltd. ('Company') is committed to protecting the privacy of all users and customers. This Privacy Policy explains how we collect, use, and safeguard your personal information.",
+      "Thamthanthi Solution Co., Ltd. ('Company'), a DLT-certified GPS Tracking service provider and MDVR device distributor, is committed to protecting the privacy of all users and customers. This Privacy Policy explains how we collect, use, and safeguard your personal information.",
     sections: [
       {
         title: "1. Information We Collect",
         content: `We may collect personal information in various ways, including:
 • Information you provide directly: full name, email address, phone number, address
-• Usage data: information about how you access and use our website or applications
+• System usage data: information about how you access our website, application, and GPS Tracking platform
+• Vehicle and trip data: GPS location, routes, speed, and driving behavior from MDVR devices
 • Device information: IP address, browser type, operating system`,
       },
       {
@@ -134,7 +136,7 @@ const content = {
       {
         title: "9. Contact Us",
         content: `If you have questions or wish to exercise your data rights, please contact us:
-Thamthanthi Co., Ltd.
+Thamthanthi Solution Co., Ltd.
 Email: info@ttthi.com
 Phone: +66 (0) 00 000 0000`,
       },
