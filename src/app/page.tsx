@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -34,6 +36,8 @@ const serviceBgs = ["bg-blue-50", "bg-amber-50", "bg-green-50", "bg-purple-50"];
 const statsIcons = [Award, Target, Users, Zap];
 const coreValueIcons = [Cpu, Award, Shield, Users];
 
+const EMPTY_FORM = { name: "", phone: "", email: "", service: "", message: "" };
+
 export default function HomePage() {
   const { lang } = useLang();
   const T = homeTranslations;
@@ -45,6 +49,42 @@ export default function HomePage() {
   const vs = T.vision;
   const ct = T.contact;
   const cta = T.cta;
+
+  const [form, setForm] = useState(EMPTY_FORM);
+  const [sending, setSending] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSending(true);
+    setStatus("idle");
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: form.name,
+          from_phone: form.phone,
+          from_email: form.email,
+          service: form.service,
+          message: form.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+      );
+      setStatus("success");
+      setForm(EMPTY_FORM);
+    } catch {
+      setStatus("error");
+    } finally {
+      setSending(false);
+    }
+  };
 
   return (
     <main className="overflow-x-hidden">
@@ -620,7 +660,7 @@ export default function HomePage() {
               <h3 className="text-xl font-bold text-[#0a1842] mb-6">
                 {lang === "th" ? ct.formTitle.th : ct.formTitle.en}
               </h3>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -628,6 +668,10 @@ export default function HomePage() {
                     </label>
                     <input
                       type="text"
+                      name="name"
+                      value={form.name}
+                      onChange={handleChange}
+                      required
                       placeholder={
                         lang === "th"
                           ? ct.placeholderName.th
@@ -642,6 +686,10 @@ export default function HomePage() {
                     </label>
                     <input
                       type="tel"
+                      name="phone"
+                      value={form.phone}
+                      onChange={handleChange}
+                      required
                       placeholder={
                         lang === "th"
                           ? ct.placeholderPhone.th
@@ -657,6 +705,9 @@ export default function HomePage() {
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
                     placeholder={
                       lang === "th"
                         ? ct.placeholderEmail.th
@@ -669,14 +720,21 @@ export default function HomePage() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     {lang === "th" ? ct.labelService.th : ct.labelService.en}
                   </label>
-                  <select className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 outline-none transition-all text-sm text-gray-700 bg-white">
+                  <select
+                    name="service"
+                    value={form.service}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 outline-none transition-all text-sm text-gray-700 bg-white"
+                  >
                     <option value="">
                       {lang === "th"
                         ? ct.selectService.th
                         : ct.selectService.en}
                     </option>
                     {ct.serviceOptions.map((o) => (
-                      <option key={o.en}>{lang === "th" ? o.th : o.en}</option>
+                      <option key={o.en} value={o.en}>
+                        {lang === "th" ? o.th : o.en}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -685,6 +743,9 @@ export default function HomePage() {
                     {lang === "th" ? ct.labelMessage.th : ct.labelMessage.en}
                   </label>
                   <textarea
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
                     rows={4}
                     placeholder={
                       lang === "th"
@@ -694,12 +755,35 @@ export default function HomePage() {
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 outline-none transition-all text-sm text-gray-800 placeholder:text-gray-400 resize-none"
                   />
                 </div>
+
+                {status === "success" && (
+                  <p className="text-green-600 text-sm font-medium">
+                    {lang === "th"
+                      ? "✓ ส่งข้อความสำเร็จแล้ว ทีมงานจะติดต่อกลับโดยเร็ว"
+                      : "✓ Message sent! Our team will get back to you soon."}
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="text-red-500 text-sm font-medium">
+                    {lang === "th"
+                      ? "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง"
+                      : "Something went wrong. Please try again."}
+                  </p>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-[#0a1842] hover:bg-[#1a3e9e] text-white font-semibold py-3.5 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-900/30 hover:-translate-y-0.5 text-sm flex items-center justify-center gap-2"
+                  disabled={sending}
+                  className="w-full bg-[#0a1842] hover:bg-[#1a3e9e] disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3.5 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-900/30 hover:-translate-y-0.5 text-sm flex items-center justify-center gap-2"
                 >
-                  {lang === "th" ? ct.submit.th : ct.submit.en}
-                  <ArrowRight size={16} />
+                  {sending
+                    ? lang === "th"
+                      ? "กำลังส่ง..."
+                      : "Sending..."
+                    : lang === "th"
+                      ? ct.submit.th
+                      : ct.submit.en}
+                  {!sending && <ArrowRight size={16} />}
                 </button>
               </form>
             </div>
