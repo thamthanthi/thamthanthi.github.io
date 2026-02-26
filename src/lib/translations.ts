@@ -106,12 +106,12 @@ export const homeTranslations = {
   serviceItems: [
     {
       th: {
-        title: "ระบบกล้องวงจรปิด",
-        desc: "ออกแบบ ติดตั้ง และดูแลรักษาระบบกล้อง CCTV ครบวงจร ตั้งแต่โครงการขนาดเล็กจนถึงระดับองค์กร",
+        title: "GPS Tracking (DLT)",
+        desc: "บริการติดตามยานพาหนะด้วย GPS ที่ได้รับการรับรองอย่างเป็นทางการจากกรมขนส่งทางบก ดูตำแหน่งเรียลไทม์ เส้นทาง และรายงานผ่านเว็บและแอปพลิเคชัน",
       },
       en: {
-        title: "CCTV Systems",
-        desc: "Design, install, and maintain complete CCTV systems, from small-scale projects to enterprise-level deployments.",
+        title: "GPS Tracking (DLT)",
+        desc: "DLT-certified GPS tracking service with real-time location, route history, and reporting via web and mobile app.",
       },
     },
     {
