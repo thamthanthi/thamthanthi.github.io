@@ -23,18 +23,18 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: "#about", label: lang === "th" ? nav.about.th : nav.about.en },
+    { href: "/#about", label: lang === "th" ? nav.about.th : nav.about.en },
     {
-      href: "#products",
+      href: "/#products",
       label: lang === "th" ? nav.products.th : nav.products.en,
     },
     {
-      href: "#services",
+      href: "/#services",
       label: lang === "th" ? nav.services.th : nav.services.en,
     },
-    { href: "#vision", label: lang === "th" ? nav.vision.th : nav.vision.en },
+    { href: "/#vision", label: lang === "th" ? nav.vision.th : nav.vision.en },
     {
-      href: "#contact",
+      href: "/#contact",
       label: lang === "th" ? nav.contact.th : nav.contact.en,
     },
   ];
@@ -81,17 +81,21 @@ export default function Navbar() {
             <div className="relative w-12 h-12 shrink-0">
               <Image
                 src="/Logo-TTTHI-(T).png"
-                alt="THAMTHANTHI Logo"
+                alt="บริษัท ทำทันที โซลูชั่น จำกัด"
                 fill
                 className="object-contain"
               />
             </div>
             <div className="flex flex-col leading-none">
               <span className="text-white font-bold text-lg tracking-wide group-hover:text-amber-400 transition-colors duration-200">
-                {lang === "th" ? "ทำทันที" : "THAMTHANTHI"}
+                {lang === "th"
+                  ? "บริษัท ทำทันที โซลูชั่น จำกัด"
+                  : "Thamthanthi Solution Co., Ltd."}
               </span>
               <span className="text-amber-400/70 text-[10px] tracking-widest font-medium">
-                {lang === "th" ? "THAMTHANTHI" : "ทำทันที"}
+                {lang === "th"
+                  ? "Thamthanthi Solution Co., Ltd."
+                  : "บริษัท ทำทันที โซลูชั่น จำกัด"}
               </span>
             </div>
           </Link>
@@ -114,7 +118,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <LangToggle />
             <a
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-300 text-sm shadow-lg hover:shadow-amber-500/30 hover:-translate-y-0.5"
             >
               {lang === "th" ? nav.contactBtn.th : nav.contactBtn.en}
@@ -154,7 +158,7 @@ export default function Navbar() {
             ))}
             <li className="mt-2">
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setIsOpen(false)}
                 className="block text-center bg-amber-500 hover:bg-amber-400 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200"
               >

@@ -69,8 +69,8 @@ const content = {
         title: "9. ติดต่อเรา",
         content: `หากท่านมีคำถามหรือต้องการใช้สิทธิ์ที่เกี่ยวข้องกับข้อมูลส่วนบุคคล สามารถติดต่อเราได้ที่:
 บริษัท ทำทันที โซลูชั่น จำกัด
-อีเมล: info@ttthi.com
-โทรศัพท์: +66 (0) 00 000 0000`,
+อีเมล: admin@ttthi.com
+โทรศัพท์: +66 (0) 815577136`,
       },
     ],
   },
@@ -137,8 +137,8 @@ const content = {
         title: "9. Contact Us",
         content: `If you have questions or wish to exercise your data rights, please contact us:
 Thamthanthi Solution Co., Ltd.
-Email: info@ttthi.com
-Phone: +66 (0) 00 000 0000`,
+Email: admin@ttthi.com
+Phone: +66 (0) 815577136`,
       },
     ],
   },

@@ -3,11 +3,13 @@ import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
-  title: "THAMTHANTHI – Technology for a Safer Tomorrow",
+  title:
+    "บริษัท ทำทันที โซลูชั่น จำกัด – เทคโนโลยีเพื่อความปลอดภัยในวันพรุ่งนี้",
   description:
-    "THAMTHANTHI ผู้ให้บริการ GPS Tracking ที่ได้รับการรับรองจากกรมขนส่งทางบก (DLT) พร้อมอุปกรณ์ MDVR ระบบ ADAS & DMS และแพลตฟอร์มติดตามยานพาหนะผ่านเว็บและมือถือ | DLT-certified GPS Tracking, MDVR, ADAS & DMS fleet safety solutions",
+    "บริษัท ทำทันที โซลูชั่น จำกัด ผู้ให้บริการ GPS Tracking ที่ได้รับการรับรองจากกรมขนส่งทางบก (DLT) พร้อมอุปกรณ์ MDVR ระบบ ADAS & DMS และแพลตฟอร์มติดตามยานพาหนะผ่านเว็บและมือถือ | DLT-certified GPS Tracking, MDVR, ADAS & DMS fleet safety solutions",
   keywords: [
-    "THAMTHANTHI",
+    "บริษัท ทำทันที โซลูชั่น จำกัด",
+    "Thamthanthi Solution Co., Ltd.",
     "GPS Tracking",
     "MDVR",
     "ADAS",
@@ -20,20 +22,22 @@ export const metadata: Metadata = {
     "พัฒนาซอฟต์แวร์",
   ],
   icons: {
-    icon: "/favicon.ico",
+    icon: "/Logo-TTTHI-(T).png",
+    apple: "/Logo-TTTHI-(T).png",
   },
   openGraph: {
-    title: "THAMTHANTHI – Technology for a Safer Tomorrow",
+    title:
+      "บริษัท ทำทันที โซลูชั่น จำกัด – เทคโนโลยีเพื่อความปลอดภัยในวันพรุ่งนี้",
     description:
-      "THAMTHANTHI ผู้ให้บริการ GPS Tracking ที่ได้รับการรับรองจากกรมขนส่งทางบก (DLT) พร้อมอุปกรณ์ MDVR ระบบ ADAS & DMS และแพลตฟอร์มติดตามยานพาหนะผ่านเว็บและมือถือ",
+      "บริษัท ทำทันที โซลูชั่น จำกัด ผู้ให้บริการ GPS Tracking ที่ได้รับการรับรองจากกรมขนส่งทางบก (DLT) พร้อมอุปกรณ์ MDVR ระบบ ADAS & DMS และแพลตฟอร์มติดตามยานพาหนะผ่านเว็บและมือถือ",
     url: "https://ttthi.com",
-    siteName: "THAMTHANTHI",
+    siteName: "บริษัท ทำทันที โซลูชั่น จำกัด",
     images: [
       {
-        url: "https://ttthi.com/Logo%20TTTHI.png",
+        url: "https://ttthi.com/Logo-TTTHI-(T).png",
         width: 512,
         height: 512,
-        alt: "THAMTHANTHI Logo",
+        alt: "บริษัท ทำทันที โซลูชั่น จำกัด",
       },
     ],
     locale: "th_TH",
@@ -41,10 +45,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "THAMTHANTHI – Technology for a Safer Tomorrow",
+    title:
+      "บริษัท ทำทันที โซลูชั่น จำกัด – เทคโนโลยีเพื่อความปลอดภัยในวันพรุ่งนี้",
     description:
-      "GPS Tracking รับรองโดย DLT พร้อม MDVR, ADAS & DMS และแพลตฟอร์มติดตามยานพาหนะ",
-    images: ["https://ttthi.com/Logo%20TTTHI.png"],
+      "บริษัท ทำทันที โซลูชั่น จำกัด ผู้ให้บริการ GPS Tracking ที่ได้รับการรับรองจากกรมขนส่งทางบก (DLT) พร้อมอุปกรณ์ MDVR ระบบ ADAS & DMS และแพลตฟอร์มติดตามยานพาหนะผ่านเว็บและมือถือ",
+    images: ["https://ttthi.com/Logo-TTTHI-(T).png"],
   },
 };
 

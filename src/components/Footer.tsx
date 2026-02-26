@@ -22,17 +22,21 @@ export default function Footer() {
               <div className="relative w-12 h-12">
                 <Image
                   src="/Logo-TTTHI-(T).png"
-                  alt="THAMTHANTHI Logo"
+                  alt="บริษัท ทำทันที โซลูชั่น จำกัด"
                   fill
                   className="object-contain"
                 />
               </div>
               <span className="text-white font-bold text-2xl tracking-wide">
                 <span className="block text-lg font-bold">
-                  {lang === "th" ? "ทำทันที" : "THAMTHANTHI"}
+                  {lang === "th"
+                    ? "บริษัท ทำทันที โซลูชั่น จำกัด"
+                    : "Thamthanthi Solution Co., Ltd."}
                 </span>
                 <span className="block text-xs text-amber-400/70 tracking-widest">
-                  {lang === "th" ? "THAMTHANTHI" : "ทำทันที"}
+                  {lang === "th"
+                    ? "Thamthanthi Solution Co., Ltd."
+                    : "บริษัท ทำทันที โซลูชั่น จำกัด"}
                 </span>
               </span>
             </div>
@@ -93,19 +97,19 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-amber-400 shrink-0" />
                 <a
-                  href="tel:+66000000000"
+                  href="tel:+66815577136"
                   className="text-gray-400 hover:text-amber-400 text-sm transition-colors"
                 >
-                  +66 (0) 00 000 0000
+                  +66 (0) 815577136
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-amber-400 shrink-0" />
                 <a
-                  href="mailto:info@ttthi.com"
+                  href="mailto:admin@ttthi.com"
                   className="text-gray-400 hover:text-amber-400 text-sm transition-colors"
                 >
-                  info@ttthi.com
+                  admin@ttthi.com
                 </a>
               </li>
             </ul>
@@ -118,8 +122,10 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-500 text-sm">
             © {currentYear}{" "}
-            {lang === "th" ? "ทำทันที (THAMTHANTHI)" : "THAMTHANTHI (ทำทันที)"}.{" "}
-            {lang === "th" ? f.rights.th : f.rights.en}
+            {lang === "th"
+              ? "บริษัท ทำทันที โซลูชั่น จำกัด"
+              : "Thamthanthi Solution Co., Ltd."}
+            . {lang === "th" ? f.rights.th : f.rights.en}
           </p>
           <div className="flex items-center gap-5">
             <Link

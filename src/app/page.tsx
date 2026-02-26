@@ -571,17 +571,17 @@ export default function HomePage() {
                 {
                   icon: Phone,
                   label: lang === "th" ? ct.phone.th : ct.phone.en,
-                  value: "+66 (0) 00 000 0000",
+                  value: "+66 (0) 815577136",
                   sub: lang === "th" ? ct.phoneSub.th : ct.phoneSub.en,
-                  href: "tel:+66000000000",
+                  href: "tel:+66815577136",
                   color: "bg-blue-50 text-blue-500",
                 },
                 {
                   icon: Mail,
                   label: lang === "th" ? ct.email.th : ct.email.en,
-                  value: "info@ttthi.com",
+                  value: "admin@ttthi.com",
                   sub: lang === "th" ? ct.emailSub.th : ct.emailSub.en,
-                  href: "mailto:info@ttthi.com",
+                  href: "mailto:admin@ttthi.com",
                   color: "bg-amber-50 text-amber-500",
                 },
                 {
@@ -718,7 +718,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+66000000000"
+              href="tel:+66815577136"
               className="inline-flex items-center gap-2 bg-white text-amber-600 hover:bg-amber-50 font-bold px-8 py-3.5 rounded-xl transition-all duration-300 shadow-lg hover:-translate-y-0.5 text-sm"
             >
               <Phone size={16} />
