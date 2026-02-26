@@ -8,7 +8,7 @@ export const homeTranslations = {
     titleHighlight: { th: "อัจฉริยะ", en: "Tracking" },
     title2: { th: "ด้วย GPS & MDVR", en: "& Safety Platform" },
     desc: {
-      th: "บริษัท ทำทันที โซลูชั่น จำกัด ผู้ให้บริการ GPS Tracking ที่ได้รับการรับรองจากกรมขนส่งทางบก (DLT) พร้อมอุปกรณ์ MDVR ระบบ ADAS และ DMS เพื่อควบคุมฟลีตและคู่มือให้นักขับขี่ของคุณปลอดภัยยิ่งขึ้น",
+      th: "บริษัท ทำทันที โซลูชั่น จำกัด ผู้ให้บริการ GPS Tracking ที่ได้รับการรับรองจากกรมขนส่งทางบก (DLT) พร้อมอุปกรณ์ MDVR ระบบ ADAS และ DMS เพื่อควบคุมฟลีตและคู่มือให้ผู้ขับขี่ของคุณปลอดภัยยิ่งขึ้น",
       en: "Thamthanthi Solution Co., Ltd. is a DLT-certified GPS Tracking provider, offering MDVR devices, ADAS, and DMS systems to help you monitor your fleet and keep your drivers safe.",
     },
     cta1: { th: "ดูสินค้าของเรา", en: "Our Products" },
@@ -229,7 +229,7 @@ export const homeTranslations = {
         en: "Lead ASEAN GPS Tracking & Fleet Safety technology",
       },
       {
-        th: "พัฒนานวัตกรรมที่ตอบโจทย์ความต้องการจริงของนักขับขี่และขนส่ง",
+        th: "พัฒนานวัตกรรมที่ตอบโจทย์ความต้องการจริงของผู้ขับขี่และขนส่ง",
         en: "Innovate to address real needs of drivers and fleet operators",
       },
       {

@@ -86,7 +86,7 @@ export default function Navbar() {
                 className="object-contain"
               />
             </div>
-            <div className="flex flex-col leading-none">
+            <div className="hidden md:flex flex-col leading-none">
               <span className="text-white font-bold text-lg tracking-wide group-hover:text-amber-400 transition-colors duration-200">
                 {lang === "th"
                   ? "บริษัท ทำทันที โซลูชั่น จำกัด"
@@ -143,6 +143,7 @@ export default function Navbar() {
           className={`md:hidden overflow-hidden transition-all duration-300 ${
             isOpen ? "max-h-96 pb-6" : "max-h-0"
           }`}
+          style={{ backgroundColor: "#0a1842" }}
         >
           <ul className="flex flex-col gap-1 pt-2">
             {navLinks.map((link) => (
