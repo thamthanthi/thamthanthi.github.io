@@ -1,8 +1,11 @@
 import { ImageResponse } from "next/og";
+import fs from "fs";
+import path from "path";
 
 export const dynamic = "force-static";
 
-export const alt = "ทำทันที โซลูชั่น จำกัด | GPS Tracking & Fleet Safety";
+export const alt =
+  "Thamthanthi Solution Co., Ltd. | GPS Tracking & Fleet Safety";
 
 export const size = {
   width: 1200,
@@ -11,11 +14,15 @@ export const size = {
 
 export const contentType = "image/png";
 
-export default async function Image() {
-  // Load Noto Sans Thai font for correct Thai character rendering
-  const fontData = await fetch(
-    "https://fonts.gstatic.com/s/notosansthai/v25/iJWnBXeUZi_OHPqn4wq6hQ2_hbJ1xyN9wd43SofpAtFv.woff",
-  ).then((res) => res.arrayBuffer());
+export default function Image() {
+  const [fontRegular, fontBold] = [
+    fs.readFileSync(
+      path.join(process.cwd(), "src/app/fonts/GoogleSans-Regular.ttf"),
+    ),
+    fs.readFileSync(
+      path.join(process.cwd(), "src/app/fonts/GoogleSans-Bold.ttf"),
+    ),
+  ];
 
   return new ImageResponse(
     <div
@@ -29,7 +36,7 @@ export default async function Image() {
         alignItems: "center",
         justifyContent: "center",
         padding: "64px",
-        fontFamily: "'Noto Sans Thai', sans-serif",
+        fontFamily: "'Google Sans'",
         position: "relative",
       }}
     >
@@ -129,10 +136,16 @@ export default async function Image() {
       ...size,
       fonts: [
         {
-          name: "Noto Sans Thai",
-          data: fontData,
+          name: "Google Sans",
+          data: fontRegular,
           style: "normal",
           weight: 400,
+        },
+        {
+          name: "Google Sans",
+          data: fontBold,
+          style: "normal",
+          weight: 700,
         },
       ],
     },

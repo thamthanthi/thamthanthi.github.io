@@ -36,7 +36,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "Sarabun", "sans-serif"],
+        sans: ["var(--font-google-sans)", "sans-serif"],
       },
     },
   },

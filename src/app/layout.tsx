@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
+import { Google_Sans } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
+
+const googleSans = Google_Sans({
+  subsets: ["latin", "thai"],
+  weight: ["400", "500", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-google-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "ทำทันที โซลูชั่น จำกัด | GPS Tracking & Fleet Safety",
@@ -47,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="th" className="scroll-smooth">
+    <html lang="th" className={`${googleSans.variable} scroll-smooth`}>
       <body className="antialiased">
         <LanguageProvider>{children}</LanguageProvider>
       </body>
