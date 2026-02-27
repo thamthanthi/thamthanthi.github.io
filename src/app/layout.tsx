@@ -12,6 +12,7 @@ const googleSans = Google_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ttthi.com"),
   title: "ทำทันที โซลูชั่น จำกัด | GPS Tracking & Fleet Safety",
   description:
     "ผู้ให้บริการ GPS Tracking รับรองโดย DLT พร้อมระบบ MDVR, ADAS & DMS ติดตามยานพาหนะ Real-time ผ่านเว็บและมือถือ ติดต่อเราวันนี้",

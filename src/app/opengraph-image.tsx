@@ -1,6 +1,4 @@
 import { ImageResponse } from "next/og";
-import fs from "fs";
-import path from "path";
 
 export const dynamic = "force-static";
 
@@ -15,15 +13,6 @@ export const size = {
 export const contentType = "image/png";
 
 export default function Image() {
-  const [fontRegular, fontBold] = [
-    fs.readFileSync(
-      path.join(process.cwd(), "src/app/fonts/GoogleSans-Regular.ttf"),
-    ),
-    fs.readFileSync(
-      path.join(process.cwd(), "src/app/fonts/GoogleSans-Bold.ttf"),
-    ),
-  ];
-
   return new ImageResponse(
     <div
       style={{
@@ -36,7 +25,7 @@ export default function Image() {
         alignItems: "center",
         justifyContent: "center",
         padding: "64px",
-        fontFamily: "'Google Sans'",
+        fontFamily: "system-ui, sans-serif",
         position: "relative",
       }}
     >
@@ -132,22 +121,6 @@ export default function Image() {
         ติดต่อเราวันนี้ → ttthi.com
       </div>
     </div>,
-    {
-      ...size,
-      fonts: [
-        {
-          name: "Google Sans",
-          data: fontRegular,
-          style: "normal",
-          weight: 400,
-        },
-        {
-          name: "Google Sans",
-          data: fontBold,
-          style: "normal",
-          weight: 700,
-        },
-      ],
-    },
+    { ...size },
   );
 }
